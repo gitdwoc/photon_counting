@@ -6,6 +6,7 @@
 
 """
 This code (xraySTORM) was written by Dylan O'Connell (dylan.oconnell@monash.edu). 
+Under the supervision of Marcus J. Kitchen and Kaye S. Morgan
 It contains modular functions that build up to finding the co-ordinates of 
 intensity peaks of low visibility in an image. 
 """
@@ -134,7 +135,7 @@ def fitablob(locationarray, originalarray, numberofblobs,imagename, savepath):
 
 #given an image, a thresholding value 'binn', a structuring element 'structure'
 #and a saving directory 'savepath'. It will find and fit each photon, saving the results in csv format  
-def dylsoSTORM(image, binn,structure, savepath):
+def xraySTORM(image, binn,structure, savepath):
     #open image
     im = io.imread(image)
     #Convert to binary
