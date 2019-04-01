@@ -5,7 +5,7 @@
 
 
 """
-This code (dylsoSTORM) was written by Dylan O'Connell (dylan.oconnell@monash.edu). 
+This code (xraySTORM) was written by Dylan O'Connell (dylan.oconnell@monash.edu). 
 It contains modular functions that build up to finding the co-ordinates of 
 intensity peaks of low visibility in an image. 
 """
