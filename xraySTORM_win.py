@@ -136,7 +136,7 @@ def fitablob(locationarray, originalarray, numberofblobs,imagename, savepath):
 
 #given an image, an average dark current average 'davg', a thresholding value 'binn', a structuring element 'structure'
 #and a saving directory 'savepath'. It will find and fit each photon, saving the results in csv format  
-def xraySTORM(image, binn,structure, savepath):
+def xraySTORM(image, davg, binn,structure, savepath):
     #open image
     im = io.imread(image) - io.imread(davg) 
     #Convert to binary
