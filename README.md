@@ -1,5 +1,5 @@
 # photon_counting
-Codes relevant to photon localiastion on visible light sensors, and image contstructions from such code. 
+Codes and data relevant to photon localisation on visible light sensors, and image constructions from such code.
 
 xraySTORM.py will output csv files of charge cloud properties (and hence x-ray photon properties), given an image with individually resolved charge clouds.
 
