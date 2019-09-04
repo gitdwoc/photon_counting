@@ -95,9 +95,9 @@ def fitablob(locationarray, originalarray, numberofblobs,imagename, savepath):
                         integrate = np.sum(area)
                         
                         #give intials and bounds to for fitting function
-                        initials  = originalarray[newpy,newpx], 3, 3, 0.9 ,110
-                        lowers = [10, 1.5, 1.5, 0.5, 90]
-                        highers = [300, 4.5,4.5, 2 ,120]
+                        initials  = originalarray[newpy,newpx], 3, 3, 0.9 ,10
+                        lowers = [10, 1.5, 1.5, 0.5, 5]
+                        highers = [300, 4.5,4.5, 2 ,15]
                         
                         #now fit using gifit function
                         try:
@@ -134,11 +134,11 @@ def fitablob(locationarray, originalarray, numberofblobs,imagename, savepath):
 
     return []
 
-#given an image, a thresholding value 'binn', a structuring element 'structure'
+#given an image, an average dark current average 'davg', a thresholding value 'binn', a structuring element 'structure'
 #and a saving directory 'savepath'. It will find and fit each photon, saving the results in csv format  
 def xraySTORM(image, binn,structure, savepath):
     #open image
-    im = io.imread(image)
+    im = io.imread(image) - io.imread(davg) 
     #Convert to binary
     origbin = binit(im, binn)
     #Apply binary erosion-dilation
