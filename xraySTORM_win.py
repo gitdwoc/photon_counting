@@ -9,6 +9,7 @@ This code (xraySTORM) was written by Dylan O'Connell (dylan.oconnell@monash.edu)
 Under the supervision of Marcus J. Kitchen and Kaye S. Morgan
 It contains modular functions that build up to finding the co-ordinates of 
 intensity peaks of low visibility in an image. 
+This windows version uses windows path directory structure to save tghe output csv
 """
 
 #import modules
@@ -65,7 +66,7 @@ def fitablob(locationarray, originalarray, numberofblobs,imagename, savepath):
     results = np.asarray([0,0,0,0,0,0,0,0,0,0,0])
     
     #Determine name of csv file to contain results
-    junk, nametif = imagename.rsplit('/',1)
+    junk, nametif = imagename.rsplit('\\',1)
     name, tif = nametif.rsplit('.',1)
     
     #iterate through each localisation in an image from a localisation array
